@@ -16,9 +16,9 @@ namespace Aufgabe01 {
     function getVerse(_subjekte: string[], _prädikate: string[], _objekte: string[]): string {
         let vers: string = "";
 
-        let randomSubjekte: number = Math.floor(Math.random() * subjekte.length);
-        let randomPrädikate: number = Math.floor(Math.random() * prädikate.length);
-        let randomObjekte: number = Math.floor(Math.random() * objekte.length);
+        let randomSubjekte: number = Math.floor(Math.random() * _subjekte.length);
+        let randomPrädikate: number = Math.floor(Math.random() * _prädikate.length);
+        let randomObjekte: number = Math.floor(Math.random() * _objekte.length);
        
         vers += _subjekte.splice(randomSubjekte, 1) + " ";
         vers += _prädikate.splice(randomPrädikate, 1) + " ";

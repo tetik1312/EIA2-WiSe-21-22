@@ -12,9 +12,9 @@ var Aufgabe01;
     }
     function getVerse(_subjekte, _prädikate, _objekte) {
         var vers = "";
-        var randomSubjekte = Math.floor(Math.random() * subjekte.length);
-        var randomPrädikate = Math.floor(Math.random() * prädikate.length);
-        var randomObjekte = Math.floor(Math.random() * objekte.length);
+        var randomSubjekte = Math.floor(Math.random() * _subjekte.length);
+        var randomPrädikate = Math.floor(Math.random() * _prädikate.length);
+        var randomObjekte = Math.floor(Math.random() * _objekte.length);
         vers += _subjekte.splice(randomSubjekte, 1) + " ";
         vers += _prädikate.splice(randomPrädikate, 1) + " ";
         vers += _objekte.splice(randomObjekte, 1) + " ";
