@@ -1,0 +1,25 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:20px;
+}
+#div0 {
+    background-color: yellow;
+    display: inline-block;
+    height: 600px;
+    width: 600px;
+}
+#div1 {
+    background-color: orange;
+    display: inline-block;
+    height: 600px;
+    width: 600px;
+}
+#span {
+    position: fixed;
+    width: 250px;
+    height: 35px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: ridge;
+    background-color: lightblue;
+}
