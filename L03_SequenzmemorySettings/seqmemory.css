@@ -1,0 +1,14 @@
+html body{
+    align-items: center;
+    justify-content: center;
+    display: grid;
+	overflow: hidden;  
+}
+
+#settings {
+	text-align: flex;
+    justify-content: flex;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 20px;
+}
