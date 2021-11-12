@@ -12,3 +12,11 @@ html body{
     border: none;
     border-radius: 20px;
 }
+
+.hidden {
+    display: none !important;
+}
+
+.visibility {
+    visibility: hidden;
+}
