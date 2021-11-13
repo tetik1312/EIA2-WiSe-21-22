@@ -16,12 +16,13 @@ namespace L03_Sequenz {
         startButton = <HTMLButtonElement>document.querySelector("#startButton");
         startButton.addEventListener("click", createCard);
     }
+
     function clickHandler(_event: Event): void {
 
         let formData: FormData = new FormData(document.forms[0]);
     }
 
-    function createCard(_word: Event): void {
+    function createCard(_sequence: Event): void {
         input = prompt("enter your sequence");
         if (input == "" || input == null) {
             alert("Please enter a sequence.");
@@ -29,35 +30,38 @@ namespace L03_Sequenz {
         else {
             form.classList.add("hidden");
             startButton.classList.add("hidden");
-            //let gamefield = document.createElement("div")
-            //gamefield.classList.add("card-content");
-            //let body = document.querySelector("body")
-            //let timer = document.createElement("span");
-            //timer.id = "timer";
-            //body.append(gamefield);
-            //body.append(timer);
             sequence = input.split("");
             let gamefield: HTMLDivElement = document.createElement("div");
             gamefield.classList.add("row");
+            let body: HTMLBodyElement = document.querySelector("body");
+            body.appendChild(gamefield);
             for (let i: number = 0; i < input.length; i++) {
                 let random: number = Math.floor(Math.random() * sequence.length);
                 let card: HTMLDivElement = document.createElement("div");
                 card.classList.add("column");
                 card.id = sequence.splice(random, 1).join();
-                let test: string = ("<div class='card'>" + card.id + "</div>");
+                let test: string = ("<div class='card'>" + card.id + "</div>"); 
                 card.innerHTML = test;
-                // newdiv.classList.add("");
-                //newdiv.style.background = document.getElementById('backgroundcolor').innerHTML;
-                let body: HTMLBodyElement = document.querySelector("body");
-                body.appendChild(gamefield);
                 gamefield.appendChild(card);
-                //document.body.style.backgroundColor = document.getElementById('backgroundcolor').innerHTML;
             }
-            //createGame();
-        }
+            let timer: HTMLElement = document.createElement("TextField");
+            timer.id = "timer";
+            timer.innerHTML = "30 Sekunden";
+            // Code for Countdown, maybe something like this
+            // let timeleft = 10;
+            // let timevalue = setInterval(function() {
+            //    if(timeleft <= 0){
+            //        clearInterval(timevalue);
+            //    }
+            //    document.getElementById("timer").value = 10 - timelft;
+            //    timeleft -= 1;}, 1000);
+            timer.classList.add("timer");
+            body.appendChild(timer);
+            window.setTimeout(startGame, 2000);
+}
     }
 
-    function createGame(): void {
-        timer = 5;
+    function startGame() {
+        // start the game here 
     }
 }
