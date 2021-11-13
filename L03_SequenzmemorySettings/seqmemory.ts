@@ -22,9 +22,9 @@ namespace L03_Sequenz {
     }
 
     function createCard(_word: Event): void {
-        input = prompt("enter your sequenz");
+        input = prompt("enter your sequence");
         if (input == "" || input == null) {
-            alert("your funny bro, enter a sequenz");
+            alert("Please enter a sequence.");
         }
         else {
             form.classList.add("hidden");

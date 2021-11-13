@@ -19,9 +19,9 @@ var L03_Sequenz;
         var formData = new FormData(document.forms[0]);
     }
     function createCard(_word) {
-        input = prompt("enter your sequenz");
+        input = prompt("enter your sequence");
         if (input == "" || input == null) {
-            alert("your funny bro, enter a sequenz");
+            alert("Please enter a sequence.");
         }
         else {
             form.classList.add("hidden");
