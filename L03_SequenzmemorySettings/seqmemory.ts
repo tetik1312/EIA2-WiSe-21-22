@@ -1,3 +1,4 @@
+//wurde gemeinsam bearbeitet mit: Lisa, Debbie, Tini
 namespace L03_Sequenz {
 
     let form: HTMLElement;
