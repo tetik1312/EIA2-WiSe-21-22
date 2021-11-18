@@ -1,3 +1,4 @@
+//zusammengearbeitet mit: debbie, tini, lisa
 var Canvas;
 (function (Canvas) {
     window.addEventListener("load", handleLoad);

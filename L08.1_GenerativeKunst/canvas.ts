@@ -1,3 +1,4 @@
+//zusammengearbeitet mit: debbie, tini, lisa
 namespace Canvas {
     window.addEventListener("load", handleLoad);
     let crc2: CanvasRenderingContext2D;
