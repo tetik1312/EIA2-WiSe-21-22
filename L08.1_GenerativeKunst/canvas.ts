@@ -1,4 +1,10 @@
-//zusammengearbeitet mit: debbie, tini, lisa
+  /*
+    Aufgabe: <L08.1 Generative Art>
+    Name: <Asya Tetik>
+    Martrikelnummer: <268052>
+    Datum: <20.11.2021>
+    Quellen: <zusammengearbeitet mit Christina Gabler, Deborah Reinbold und Lisa Fingerle>
+    */ 
 namespace Canvas {
     window.addEventListener("load", handleLoad);
     let crc2: CanvasRenderingContext2D;
