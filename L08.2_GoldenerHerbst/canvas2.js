@@ -2,7 +2,7 @@
   Aufgabe: <L08.2_GoldenerHerbst: Canvas>
   Name: <Asya Tetik>
   Martrikelnummer: <268052>
-  Datum: <24.11.2021>
+  Datum: <25.11.2021>
   Quellen: <zusammengearbeitet mit Christina Gabler, Deborah Reinbold und Lisa Fingerle>
           <Sonne, Wolken und Berge wurden übernommen vom Inverted Classroom>
 */
