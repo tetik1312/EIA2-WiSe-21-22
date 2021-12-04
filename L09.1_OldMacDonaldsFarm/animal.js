@@ -7,14 +7,16 @@ var OldMcDonald;
             this.breed = _breed;
             this.sound = _sound;
         }
-        Animal.prototype.eat = function (_foodAmount, _food) {
-            OldMcDonald.stockAmount[_food].amount = _foodAmount;
-            textDOMElement = document.querySelector("#animal" + _food);
-            textDOMElement.innerHTML = "The farmer has " + OldMcDonald.stockAmount[_food].amount + " " + "kg " + OldMcDonald.stockAmount[_food].name + " left.";
-            var eating = document.querySelector("#eating");
-            eating.innerHTML = this.name + " eats" + _foodAmount + "kg" + OldMcDonald.stockAmount[_food].name + ".<br>";
+        //code funktioniert nicht wenn methode eat auskommentiert ist (liedtext erscheint dadurch nicht)       
+        Animal.prototype.eat = function (_amount, _foodPosition) {
+            // stock[_foodPosition].amount = _amount;
+            // textDOMElement = <HTMLElement>document.querySelector("#animal" + _foodPosition);
+            // textDOMElement.innerHTML = "The farmer has " + stock[_foodPosition].amount + "kg " + stock[_foodPosition].name + " left.";
+            // let eating: HTMLElement = <HTMLElement>document.querySelector("#eating");
+            // eating.innerHTML = this.name + " eats" + stock[_foodPosition].name + ".<br>";
         };
-        Animal.prototype.sing = function (_foodAmount) {
+        //es erscheint ein error für repeat, aber es funktioniert?
+        Animal.prototype.sing = function (_food) {
             var animalName = document.querySelector("#animalName");
             var song = document.querySelector("#song");
             animalName.innerHTML = this.breed + " " + this.name;

@@ -13,17 +13,19 @@ namespace OldMcDonald {
             this.sound = _sound;
         }
 
+        //code funktioniert nicht wenn methode eat auskommentiert ist (liedtext erscheint dadurch nicht)       
+        eat(_amount: number, _foodPosition: number): void {
+            // stock[_foodPosition].amount = _amount;
+            // textDOMElement = <HTMLElement>document.querySelector("#animal" + _foodPosition);
+            // textDOMElement.innerHTML = "The farmer has " + stock[_foodPosition].amount + "kg " + stock[_foodPosition].name + " left.";
 
-        eat(_foodAmount: number, _food: number): void {
-            stockAmount[_food].amount = _foodAmount;
-            textDOMElement = <HTMLElement>document.querySelector("#animal" + _food);
-            textDOMElement.innerHTML = "The farmer has " + stockAmount[_food].amount + " " + "kg " + stockAmount[_food].name + " left.";
-
-            let eating: HTMLElement = <HTMLElement>document.querySelector("#eating");
-            eating.innerHTML = this.name + " eats" + _foodAmount + "kg" + stockAmount[_food].name + ".<br>";
+            // let eating: HTMLElement = <HTMLElement>document.querySelector("#eating");
+            // eating.innerHTML = this.name + " eats" + stock[_foodPosition].name + ".<br>";
         }
 
-        sing(_foodAmount: number): void {
+
+        //es erscheint ein error für repeat, aber es funktioniert?
+        sing(_food: number): void {
             let animalName: HTMLElement = <HTMLElement>document.querySelector("#animalName");
             let song: HTMLElement = <HTMLElement>document.querySelector("#song");
 

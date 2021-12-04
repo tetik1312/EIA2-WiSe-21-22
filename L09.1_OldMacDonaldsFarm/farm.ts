@@ -1,3 +1,11 @@
+/*
+  Aufgabe: <L09.1_OldMacDonaldsFarm>
+  Name: <Asya Tetik>
+  Martrikelnummer: <268052>
+  Datum: <04.12.2021>
+  Quellen: <zusammengearbeitet mit Christina, Debbie und Lisa >
+*/
+
 namespace OldMcDonald {
     let counter: number = 0;
     
@@ -15,7 +23,7 @@ namespace OldMcDonald {
         amount: number;
     }
 
-    export let stockAmount: Stock[] = [{
+    export let stock: Stock[] = [{
         name: "hay",
         amount: 200
     },

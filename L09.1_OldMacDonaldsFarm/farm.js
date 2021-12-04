@@ -1,3 +1,10 @@
+/*
+  Aufgabe: <L09.1_OldMacDonaldsFarm>
+  Name: <Asya Tetik>
+  Martrikelnummer: <268052>
+  Datum: <04.12.2021>
+  Quellen: <zusammengearbeitet mit Christina, Debbie und Lisa >
+*/
 var OldMcDonald;
 (function (OldMcDonald) {
     var counter = 0;
@@ -6,7 +13,7 @@ var OldMcDonald;
         farmDay();
         document.querySelector("#nextDay").addEventListener("click", farmDay);
     }
-    OldMcDonald.stockAmount = [{
+    OldMcDonald.stock = [{
             name: "hay",
             amount: 200
         },
