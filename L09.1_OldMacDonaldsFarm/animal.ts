@@ -30,7 +30,7 @@ namespace OldMcDonald {
             let song: HTMLElement = <HTMLElement>document.querySelector("#song");
 
             animalName.innerHTML = this.breed + " " + this.name;
-            song.innerHTML = "Old MacDonald had a farm" + " " + (this.sound + " ").repeat(5) + "," + "<br>" + "on his farm he had some " + this.breed + "'s " + " " + (this.sound + " ").repeat(5) + " ";
+            // song.innerHTML = "Old MacDonald had a farm" + " " + (this.sound + " ").repeat(5) + "," + "<br>" + "on his farm he had some " + this.breed + "'s " + " " + (this.sound + " ").repeat(5) + " ";
         }
     }
 }

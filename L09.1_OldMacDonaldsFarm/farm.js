@@ -41,27 +41,27 @@ var OldMcDonald;
         var cow = new OldMcDonald.Animal("Benita", "Cow", "moo");
         setTimeout(function () {
             cow.eat(50, 0);
-            cow.sing(50);
+            cow.sing(0);
         }, 200);
         var chicken = new OldMcDonald.Animal("Hannah", "Chicken", "cluck");
         setTimeout(function () {
             chicken.eat(2, 1);
-            chicken.sing(0);
+            chicken.sing(1);
         }, 2500);
         var horse = new OldMcDonald.Animal("Rowdy", "Horse", "neigh");
         setTimeout(function () {
             horse.eat(50, 2);
-            horse.sing(0);
+            horse.sing(2);
         }, 5500);
         var pig = new OldMcDonald.Animal("Babe", "Pig", "oink");
         setTimeout(function () {
             pig.eat(20, 3);
-            pig.sing(0);
+            pig.sing(3);
         }, 7500);
         var cat = new OldMcDonald.Animal("Lokum", "Cat", "meow");
         setTimeout(function () {
             cat.eat(3, 4);
-            cat.sing(0);
+            cat.sing(4);
         }, 9500);
     }
 })(OldMcDonald || (OldMcDonald = {}));

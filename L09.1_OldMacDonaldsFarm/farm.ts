@@ -56,31 +56,31 @@ namespace OldMcDonald {
         let cow: Animal = new Animal("Benita", "Cow", "moo");
         setTimeout(function (): void {
             cow.eat(50, 0);
-            cow.sing(50);
+            cow.sing(0);
         },         200);
 
         let chicken: Animal = new Animal("Hannah", "Chicken", "cluck");
         setTimeout(function (): void {
             chicken.eat(2, 1);
-            chicken.sing(0);
+            chicken.sing(1);
         },             2500);
 
         let horse: Animal = new Animal("Rowdy", "Horse", "neigh");
         setTimeout(function (): void {
             horse.eat(50, 2);
-            horse.sing(0);
+            horse.sing(2);
         },             5500);
 
         let pig: Animal = new Animal("Babe", "Pig", "oink");
         setTimeout(function (): void {
             pig.eat(20, 3);
-            pig.sing(0);
+            pig.sing(3);
         },             7500);
 
         let cat: Animal = new Animal("Lokum", "Cat", "meow");
         setTimeout(function (): void {
             cat.eat(3, 4);
-            cat.sing(0);
+            cat.sing(4);
         },             9500);
     }
 }
