@@ -36,8 +36,8 @@ namespace Polymorphie {
             }
 
             if (this.counter == this.randomNumber) {
-                this.velocityX = -this.velocityX;
-                this.velocityY = -this.velocityY;
+                // this.velocityX = -this.velocityX;
+                // this.velocityY = -this.velocityY;
                 this.counter = 0;
                 this.randomNumber = (Math.floor(Math.random() * 800) + 100);
             }

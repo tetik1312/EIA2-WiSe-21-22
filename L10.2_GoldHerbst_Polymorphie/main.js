@@ -9,6 +9,7 @@ var Polymorphie;
 (function (Polymorphie) {
     Polymorphie.golden = 0.62;
     var moveable = [];
+    var imageData;
     var horizon = Polymorphie.crc2.canvas.height * Polymorphie.golden;
     window.addEventListener("load", handleLoad);
     function handleLoad(_event) {
@@ -19,10 +20,8 @@ var Polymorphie;
         createLeaves(20);
         createSquirrel(6);
         createCloud();
+        imageData = Polymorphie.crc2.getImageData(0, 0, canvas.width, canvas.height);
         animate();
-        //     for (let index: number = 0; index < 3; index++) {
-        //         drawSquirrel({ x: Math.random() * 1000, y: 250 + Math.random() * 100 });
-        //    }
     }
     function createBackground() {
         Polymorphie.drawBackground();
@@ -42,6 +41,7 @@ var Polymorphie;
             moveable.push(new Polymorphie.Leaf({ x: Polymorphie.crc2.canvas.width / 2, y: Polymorphie.crc2.canvas.height * 0.8 }, { x: randomVelocityX, y: randomVelocityY }, { x: randomScaleX, y: randomScaleY }));
         }
     }
+    Polymorphie.createLeaves = createLeaves;
     function createSquirrel(_nSquirrel) {
         for (var index = 0; index < _nSquirrel; index++) {
             var randomScaleY = 0.90 + Math.random() * (0.30 - 0.10);
@@ -61,6 +61,7 @@ var Polymorphie;
     function animate() {
         requestAnimationFrame(animate);
         Polymorphie.crc2.clearRect(0, 0, Polymorphie.crc2.canvas.width, Polymorphie.crc2.canvas.height);
+        Polymorphie.crc2.putImageData(imageData, 0, 0);
         for (var i = 0; i < moveable.length; i++) {
             moveable[i].draw();
             moveable[i].update();

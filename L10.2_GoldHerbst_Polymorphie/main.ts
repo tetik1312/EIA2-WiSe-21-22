@@ -9,6 +9,7 @@ namespace Polymorphie {
     export let crc2: CanvasRenderingContext2D;
     export let golden: number = 0.62;
     let moveable: Moveable [] = [];
+    let imageData: ImageData;
     let horizon: number = crc2.canvas.height * golden;
 
     export interface Vector {
@@ -27,13 +28,9 @@ namespace Polymorphie {
         createLeaves(20);
         createSquirrel(6);
         createCloud();
+        imageData =  crc2.getImageData(0, 0, canvas.width, canvas.height);
         animate();
 
-    //     for (let index: number = 0; index < 3; index++) {
-
-    //         drawSquirrel({ x: Math.random() * 1000, y: 250 + Math.random() * 100 });
-
-    //    }
     }
 
     function createBackground(): void {
@@ -47,7 +44,7 @@ namespace Polymorphie {
 
     }
 
-    function createLeaves(_nleaf: number): void {
+    export function createLeaves(_nleaf: number): void {
         for (let i: number = 0; i < _nleaf; i++) {
             let randomScaleY: number = 0.15 + Math.random() * (0.15 - 0.05);
             let randomScaleX: number = randomScaleY;
@@ -84,6 +81,7 @@ namespace Polymorphie {
     function animate(): void {
         requestAnimationFrame(animate);
         crc2.clearRect(0, 0, crc2.canvas.width, crc2.canvas.height);
+        crc2.putImageData(imageData, 0, 0);
         for (let i: number = 0; i < moveable.length; i++) {
             moveable[i].draw();
             moveable[i].update();
