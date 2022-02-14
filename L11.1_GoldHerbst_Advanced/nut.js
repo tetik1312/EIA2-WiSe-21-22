@@ -18,7 +18,7 @@ var Advanced;
         function Nut(_position) {
             return _super.call(this, _position) || this;
         }
-        Nut.prototype.draw = function () {
+        Nut.prototype.drawNuts = function () {
             Advanced.crc2.save();
             Advanced.crc2.beginPath();
             Advanced.crc2.arc(this.position.x, this.position.y, 6, 0, 2 * Math.PI);
